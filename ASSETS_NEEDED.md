@@ -1,14 +1,15 @@
 # ASSETS_NEEDED.md — Every media slot standing on a placeholder
 
-No approved photography or video exists for this response, and the brief prohibits stock imagery
-of handshakes, skylines, or conference rooms. Every media slot below currently renders a
+No approved photography or video existed at first draft, and the brief prohibits stock imagery
+of handshakes, skylines, or conference rooms — so most media slots below still render a
 CSS-only `.motion-plate` (a slow, token-derived gradient/grid field — brass and sage washes over
-a fine repeating grid) rather than a broken-image state, so the document is presentation-ready
-as-is. Replace in priority order (hero first — it's the first thing anyone sees).
+a fine repeating grid) rather than a broken-image state, so the document stays presentation-ready
+as-is. The hero (§01) has since been supplied with real assets — see below — and no longer needs
+one. Replace the rest in priority order.
 
 | # | Section | Slot | Current state | Recommended real asset |
 |---|---|---|---|---|
-| 1 | §01 Hero | Full-bleed background | `.motion-plate`, full viewport | A single high-quality still or slow looping muted video — poured-concrete texture, structural grid in motion, or an abstract brand-palette field. 16:9 minimum, works cropped to any viewport ratio. If video: ≤5MB compressed, `muted playsinline loop`, poster frame required. |
+| 1 | §01 Hero | Full-bleed layered background | **Filled.** `hero-video.mp4` (5s, 1280×720, h264/aac, muted/looped/autoplay) as the back layer, `hero-portrait.jpg` (Rich Kleiman, supplied) as a masked foreground layer over the right third, both GSAP ScrollTrigger-scrubbed at different rates. Base64-embedded. See GAP_LOG.md for the parallax implementation notes. | None — replace only if the source video/portrait change. |
 | 2 | §07 Boardroom 100 | Statement-band background | `.motion-plate`, full viewport | Same treatment as hero, or a distinct abstract variant — this is the document's single heaviest visual moment and should feel different from the hero, not repeated. |
 | 3 | §07 Boardroom 100 | TextParallax sticky media (concept sub-slide) | `.motion-plate` inside the 150vh sticky region | Editorial, globally-authoritative imagery per the slide's own DESIGN DIRECTION — explicitly *not* a membership-roster look. A world-map-adjacent abstract or an editorial texture, not literal portraits (no confirmed honorees exist yet). |
 | 4 | §19 Closing | Finale-zoom background | `.motion-plate`, animates via the ported `useFinaleZoom` scale/blur/fade | A closing brand plate — the concrete ring mark motif rendered large and abstract, or the same texture family as the hero for narrative bookending. |

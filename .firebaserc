@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "kick-check-tcg"
+  },
+  "targets": {
+    "kick-check-tcg": {
+      "hosting": {
+        "boardroom-rfp": ["boardroom-rfp"]
+      }
+    }
+  }
+}
